@@ -74,8 +74,7 @@ public class Index {
     
     public void run(String server, String port, String user, String pass){
         this.modal_message = new ModalMessage();
-//        this.con_ctrl = new Connect(server, port, user, pass, "ACCESO_A_DATOS");
-        this.con_ctrl = new Connect("localhost", "1521", "AD_TEMA02", "AD_TEMA02", "ACCESO_A_DATOS");
+        this.con_ctrl = new Connect(server, port, user, pass, "xe");
         this.con = this.con_ctrl.getConnect();
         
         if(this.con == null){
